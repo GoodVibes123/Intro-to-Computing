@@ -41,7 +41,7 @@ print("\n\nAnswer 2.")
 name= "Priyanka Soni"
 sid= "21103051"
 department= "CSE"
-cgpa= "10"
+cgpa= "9.9"
 
 #printing the desired output with the format function
 print("Hey, {} Here!".format(name))
