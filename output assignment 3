@@ -1,0 +1,64 @@
+Ans1
+Enter a string(only letters and spaces allowed): Print on print paper
+{'print': 2, 'on': 1, 'paper': 1}
+
+
+Ans2
+Day- 23
+Month- 4
+Year-2000
+24 / 4 / 2000
+
+
+Ans3
+Enter integers in the following way(num1 num2 num3...  ): 3 5 8
+[(3, 9), (5, 25), (8, 64)]
+
+
+Ans4
+write grade between 4 and 10 here: 6
+Your Grade is 'C+' and Average Performance.
+
+
+Ans5
+Enter the number of rows in the pattern: 6
+ABCDEFGHIJK
+ ABCDEFGHI
+  ABCDEFG
+   ABCDE
+    ABC
+     A
+
+
+Ans6
+Enter SID: 23
+Enter Name: riya
+Do you want to enter another student entry(Y or N):Y
+Enter SID: 45
+Enter Name: diya
+Do you want to enter another student entry(Y or N):N
+a. {23: 'riya', 45: 'diya'}
+b. {45: 'diya', 23: 'riya'}
+c. {23: 'riya', 45: 'diya'}
+Search Name with SID: 23
+d. riya
+
+
+Ans7
+How many terms? 5
+Fibonacci sequence:
+0
+1
+1
+2
+3
+
+
+Ans8
+a. {1, 3, 5, 6, 8}
+b. {3, 6, 8, 9, 13, 17}
+c. {1, 2, 4, 5}
+d. {6, 7, 8, 9, 10}
+e. {10, 7}
+
+Process finished with exit code 0
