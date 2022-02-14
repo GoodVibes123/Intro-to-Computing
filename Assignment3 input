@@ -1,0 +1,229 @@
+#Question1
+print("\n\nAns1")
+
+string = input("Enter a string(only letters and spaces allowed): ").lower()
+
+
+# convert to list for counting words
+stringlist = string.split()
+
+
+def count_in_dict(list):
+    count = {}
+
+    n = len(list)
+    for i in range(n):
+        if list[i] in count:
+            count[list[i]] += 1
+        else:
+            count[list[i]] = 1
+    return count
+
+
+# check for number of words
+if len(stringlist) == 1:
+
+    # making a list of all the letters
+    stringlist = list(stringlist[0])
+
+    print(count_in_dict(stringlist))
+else:
+    # the list has more than one word
+    # so the function will count the words
+
+    print(count_in_dict(stringlist))
+
+#Question2
+print('\n\nAns2')
+
+day = int(input('Day- '))
+month = int(input('Month- '))
+year = int(input('Year-'))
+
+#defining a function
+def nextday(d=day,m=month,y=year):
+    month31 = [1,3,5,7,8,10,12]
+    month30 = [4,6,9,11]
+    #making sure the year entered is in the possible range
+    if 1800 <= year <= 2025:
+        #for months with 31 days
+        if month in month31:
+            #for days at the end of the month
+            if day == 31:
+                d = 1
+                #for the last month dec special case
+                if m == 12:
+                    m = 1
+                    y += 1
+                else:
+                    m += 1
+            elif 1 <= d <= 30:
+                d += 1
+            else:
+                print('try again')
+                exit()
+        #for months with 30 days
+        elif month in month30:
+            #for the last day of the month
+            if day == 30:
+                d = 1
+                m += 1
+            elif 1 <= d <= 29:
+                d += 1
+            else:
+                print('try again')
+                exit()
+        #special case for feburary
+        elif month == 2:
+            #when the year is a leap year
+            if y%4 == 0:
+                #last day
+                if day == 29:
+                    d = 1
+                    m += 1
+                elif 1 <= d <= 28:
+                    d += 1
+                else:
+                    print('try again')
+                    exit()
+            #for other years except leap year
+            elif y%4!=0:
+                #last day
+                if day == 28:
+                    d = 1
+                    m += 1
+                elif 1 <= d <= 27:
+                    d += 1
+                else:
+                    print('try again')
+                    exit()
+        else:
+            print('try again')
+            exit()
+    else:
+        print("try again")
+        exit()
+    print(d,'/',m,'/',y)
+
+nextday()
+
+#Question3
+print('\n\nAns3')
+
+inputlist = list(map(int, input("Enter integers in the following way(num1 num2 num3...  ): ").split()))
+
+squarelist = [(inputlist[i], inputlist[i] ** 2) for i in range(len(inputlist))]
+
+print(squarelist)
+
+#Question 4
+print("\n\nAns4")
+#Asks the user to enter grade
+grade = int(input('write grade between 4 and 10 here: '))
+if 4 <= grade <= 10:
+    #maps grade to the number scored
+    dict1 = {4: 'D', 5: 'C', 6: 'C+', 7: 'B', 8: 'B+', 9: 'A', 10: 'A+'}
+    #evaluates the performance and leaves a remark
+    dict2 = {4: 'Poor', 5: 'Below Average', 6: 'Average', 7: 'Good', 8: 'Very Good', 9: 'Excellent', 10: 'Outstanding'}
+    a = dict1[grade]
+    b = dict2[grade]
+    print(f"Your Grade is '{a}' and {b} Performance.")
+else:
+    print('error! grade should be between 4 and 10')
+
+# Question 5
+print('\n\nAns5')
+# Program to print alphabet pattern using string library
+import string
+
+rows = int(input('Enter the number of rows in the pattern: '))
+# Using string library function to create a string of uppercase alphabets
+alpha = string.ascii_uppercase
+# Rows can be between 1 and 13
+if 1 <= rows <= 13:
+    # Using nested for loop to create the pattern
+    for i in range(rows, 0, -1):
+        for j in range(0, rows-i):
+            print(end=' ')
+        print(alpha[0:(2 * i - 1)])
+# Printing error message if invalid no. of rows is entered
+else:
+    print('Enter no. of rows between 1 and 13.')
+
+# Question 6
+print('\n\nAns6')
+sid = int(input("Enter SID: "))
+name = input("Enter Name: ")
+students = {sid: name}
+
+while True:
+    option = input("Do you want to enter another student entry(Y or N):").upper()
+    if option == 'Y':
+        sid = int(input("Enter SID: "))
+        name = input("Enter Name: ")
+        students[sid] = name
+    elif option == 'N':
+        break
+    else:
+        print('Invalid input!')
+
+# part a. print the dictionary
+print("a.", students)
+
+# part b. sort acc to the names
+print("b.", {k: v for k, v in sorted(students.items(), key=lambda x: x[1])})
+
+# part c. sort acc to the SIDs
+print("c.", {k: v for k, v in sorted(students.items())})
+
+# part d. search for a student by their SID
+sid = int(input("Search Name with SID: "))
+print("d.", students[sid])
+
+
+# Question 7
+# Program to display the Fibonacci sequence up to n-th term
+print('\n\nAns7')
+terms = int(input("How many terms? "))
+
+# Initialising first two numbers of the sequence
+num1, num2 = 0, 1
+count = 0
+
+# Check if the number of terms is valid
+if terms <= 0:
+    print("Please enter a positive integer")
+# If there is only one term, return num1
+elif terms == 1:
+    print("Fibonacci sequence upto", terms, ":")
+    print(num1)
+# Generating fibonacci sequence up to n-th term
+else:
+    print("Fibonacci sequence:")
+    while count < terms:
+        print(num1)
+        next = num1 + num2
+        # update values
+        num1 = num2
+        num2 = next
+        count += 1
+
+
+# Question 8
+print("\n\nAns8")
+#giving values to set
+set1 = {1, 2, 3, 4, 5}
+set2 = {2, 4, 6, 8}
+set3 = {1, 5, 9, 13, 17}
+
+# part a.
+print("a.", (set1 | set2) - (set1 & set2))
+# part b.
+print("b.", (set1 | set2 | set3) - ((set1 & set2) | (set1 & set3) | (set3 & set2)))
+# part c.
+print("c.", ((set1 & set2) | (set1 & set3) | (set3 & set2)) - (set1 & set2 & set3))
+# part d.
+set10 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+print("d.", set10 - set1)
+# part e.
+print("e.", set10 - (set1 | set2 | set3))
