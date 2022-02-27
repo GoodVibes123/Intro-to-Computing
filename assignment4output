@@ -1,0 +1,86 @@
+ANSWER 1
+Move disk 1 from rod A to rod C
+Move disk 2 from rod A to rod B
+Move disk 1 from rod C to rod B
+Move disk 3 from rod A to rod C
+Move disk 1 from rod B to rod A
+Move disk 2 from rod B to rod C
+Move disk 1 from rod A to rod C
+
+
+ANSWER 2
+Enter the size of pascals triangle 12
+USING FOR LOOP
+             1 
+            1 1 
+           1 2 1 
+          1 3 3 1 
+         1 4 6 4 1 
+        1 5 10 10 5 1 
+       1 6 15 20 15 6 1 
+      1 7 21 35 35 21 7 1 
+     1 8 28 56 70 56 28 8 1 
+    1 9 36 84 126 126 84 36 9 1 
+   1 10 45 120 210 252 210 120 45 10 1 
+  1 11 55 165 330 462 462 330 165 55 11 1 
+
+
+
+USING WHILE LOOP
+             1 
+            1 1 
+           1 2 1 
+          1 3 3 1 
+         1 4 6 4 1 
+        1 5 10 10 5 1 
+       1 6 15 20 15 6 1 
+      1 7 21 35 35 21 7 1 
+     1 8 28 56 70 56 28 8 1 
+    1 9 36 84 126 126 84 36 9 1 
+   1 10 45 120 210 252 210 120 45 10 1 
+  1 11 55 165 330 462 462 330 165 55 11 1 
+
+
+
+USING RECURSSIONS
+                      1   
+                    1   1   
+                  1   2   1   
+                1   3   3   1   
+              1   4   6   4   1   
+            1   5   10   10   5   1   
+          1   6   15   20   15   6   1   
+        1   7   21   35   35   21   7   1   
+      1   8   28   56   70   56   28   8   1   
+    1   9   36   84   126   126   84   36   9   1   
+  1   10   45   120   210   252   210   120   45   10   1   
+1   11   55   165   330   462   462   330   165   55   11   1   
+
+
+ANSWER 3
+Enter 2 numbers: 13 9
+a. Checking if the quotient and remainder is a callable value or not.
+False
+False
+<b> All the values are non zero
+<c> Filtered out numbers that are greater than 4 are : [5, 8, 9, 6, 9, 7, 10]
+<d> Set: {5, 6, 7, 8, 9, 10}
+<e> Immutable set: frozenset({5, 6, 7, 8, 9, 10})
+<f> Hash value of the max value from the above set: 10
+
+
+ANSWER 4 
+Object created
+The name of the student it Priyanka and SID is 21103051.
+Object destroyed
+
+
+ANSWER 5
+<a> The updated salary of Mehak is 70000 
+<b>Record of Viren deleted
+
+ANSWER 6
+Enter the word: leap
+Enter a new meaningful word using the exact same letters to test your friendship: peal
+Does the word makes sense?(y/Y or n/N )Y
+The friends pass the friendship test
