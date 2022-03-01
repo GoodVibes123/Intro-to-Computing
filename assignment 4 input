@@ -147,37 +147,27 @@ print("\n")
 
 #QUESTION 6
 print("ANSWER 6")
-#inputting a word from the first friend
-word =input("Enter the word: ")
-word=word.lower()
+# Defining anagram function
+def anagram(string):
+    if len(string) == 1:
+        return [string]
+    other_words = anagram(string[1:])
+    first_letter = string[0]
+    anagrams = []
+    for combination in other_words:
+        for i in range(len(combination)+1):
+            anagrams.append(combination[:i] + first_letter + combination[i:])
+    return anagrams
 
-#inputting a meaningful word with the exact same letters
-testword = input("Enter a new meaningful word using the exact same letters to test your friendship: ")
-testword=testword.lower()
-#defining dictionary
-def count_in_dict(word):
-    count = {}
-    list1 = list(word)
-    
-    n = len(list1)
-    for i in range(n):
-        if list1[i] in count:
-            count[list1[i]] += 1
-        else:
-            count[list1[i]] = 1
-    return count
-#shopkeeper's input to verify the word's meaning
-def userinput():
-    if count_in_dict(word) != count_in_dict(testword):
-        print("The letters aren't exact, friendship is fake")
-        return
-    ans = input("Does the word makes sense?(y/Y or n/N )")
 
-    if ans == 'y' or ans=='Y':
-        print("The friends pass the friendship test")
-    elif ans == 'n' or ans=='N':
-        print("The word doesn't have a meaning, friendship is fake")
-    else:
-        print("Invalid input,try again with y/Y or n/N ")
-        userinput()
-userinput()
+# Inputting George's and Barbie's words.
+george_word = input("George's word:-").lower()
+barbie_word = input("Barbie's word:-").lower()
+# Calling the anagram function
+other_words = anagram(george_word)
+print("Now we shall judge the credibility of their friendship! \n")
+# Using if else to check the condition
+if barbie_word in other_words:
+    print("The Friendship is real.")
+else:
+    print("The Friendship is fake.")
